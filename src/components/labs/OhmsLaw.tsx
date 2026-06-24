@@ -17,14 +17,14 @@ export function OhmsLawLab() {
     const dpr = window.devicePixelRatio || 1;
 
     const resize = () => {
-      const { width, height } = canvas.getBoundingClientRect();
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
+      const { width, height } = ctx.canvas.getBoundingClientRect();
+      ctx.canvas.width = width * dpr;
+      ctx.canvas.height = height * dpr;
       draw();
     };
 
     function draw() {
-      const W = canvas.width, H = canvas.height;
+      const W = ctx.canvas.width, H = ctx.canvas.height;
       ctx.clearRect(0, 0, W, H);
       ctx.save();
 
